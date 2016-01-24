@@ -63,7 +63,6 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 					$images->set("FileImage", $fileImage);
 					try {
 					  $images->save();
-					  echo "test";
 					} catch (ParseException $ex) {  
 					  // Execute any logic that should take place if the save fails.
 					  // error is a ParseException object with an error code and message.
