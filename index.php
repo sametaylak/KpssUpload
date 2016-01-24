@@ -49,11 +49,11 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 			}
 	        else{ // No error found! Move uploaded files 
 	        	echo $_FILES['files']['tmp_name'][$f];
-	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "http://kpssupload.azurewebsites.net/uploads/".$name))
+	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], $_SERVER['DOCUMENT_ROOT']."/uploads/".$name))
 				{
 					echo "test2";
-					$file = fopen("http://kpssupload.azurewebsites.net/uploads/".$name, "rb");
-					$contents = fread($file, filesize("http://kpssupload.azurewebsites.net/uploads/".$name));
+					$file = fopen($_SERVER['DOCUMENT_ROOT']."/uploads/".$name, "rb");
+					$contents = fread($file, filesize($_SERVER['DOCUMENT_ROOT']."/uploads/".$name));
 					fclose($file);
 					$fileImage = ParseFile::createFromData($contents, $name);
 					$fileImage->save();
