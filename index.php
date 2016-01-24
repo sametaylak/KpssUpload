@@ -53,7 +53,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 				continue; // Skip invalid file formats
 			}
 	        else{ // No error found! Move uploaded files 
-	        	$parts = explode("_", $name);
+	        	$parts = explode(".", $name);
 	        	$query = new ParseQuery("Photos");
 	        	$query->equalTo("FileName", $parts[0]);
 	        	$results = $query->find();
@@ -66,7 +66,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 						$fileImage = ParseFile::createFromData($contents, $name);
 						$fileImage->save();
 
-	        			$parts = explode("_", $name);
+	        			$parts = explode(".", $name);
 
 						$images = new ParseObject("Photos");
 						$images->set("FileName", $parts[0]);
