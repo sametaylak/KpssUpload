@@ -50,6 +50,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        else{ // No error found! Move uploaded files 
 	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
 				{
+					echo "test2";
 					$file = fopen("uploads/".$name, "rb");
 					$contents = fread($file, filesize("uploads/".$name));
 					fclose($file);
