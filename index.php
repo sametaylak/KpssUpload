@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Çoklu fotoğraf yükleme</title>
+  	<meta charset="UTF-8" />
+  	<title>Çoklu fotoğraf yükleme</title>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <style type="text/css">
   	form {
     	width: 300px;
@@ -14,6 +15,7 @@
 	<form action="" method="post" enctype="multipart/form-data">
     	<input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
   	<input type="submit" value="Upload!" />
+  	Durum :  <progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
 </form>
 </body>
 </html>
