@@ -1,3 +1,9 @@
+<?php session_start() 
+
+if(!isset($_SESSION['test'])
+	break;
+
+?>
 <html lang="en">
 <head>
   	<meta charset="UTF-8" />
