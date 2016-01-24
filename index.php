@@ -27,8 +27,7 @@
 </html>
 <?php
 
-if(isset($_POST)){
-{
+
 	ob_start();
 	session_start();
 	ini_set('display_errors',1);
@@ -40,15 +39,8 @@ if(isset($_POST)){
 	    $_SESSION["login"] = "true";
 	    header("Location:upload_file.php");
 	}
-	else {
-	    if($kadi=="" or $sifre=="") {
-	        echo "<center>Lutfen kullanici adi ya da sifreyi bos birakmayiniz..!</center>";
-	    }
-	    else {
-	        echo "<center>Kullanici Adi/Sifre Yanlis.<br></center>";
-	    }
-	}
+
 	ob_end_flush();
-}
+
  
 ?>
