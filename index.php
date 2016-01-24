@@ -31,8 +31,7 @@ session_start();
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-if(isset($_POST)){
-{
+
 	$kadi = $_POST['kadi'];
 	$sifre = $_POST['sifre'];
 	 
@@ -48,7 +47,7 @@ if(isset($_POST)){
 	        echo "<center>Kullanici Adi/Sifre Yanlis.<br></center>";
 	    }
 	}
-}
+
  
 ob_end_flush();
 ?>
