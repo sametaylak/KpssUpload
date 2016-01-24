@@ -11,7 +11,7 @@
       background: #ecf0f1;
     }
     .container-main{
-      width: 300px;
+      width: 640px;
       margin: 40px auto;
       padding: 20px;
       background: white;
