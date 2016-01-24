@@ -50,10 +50,10 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 				continue; // Skip invalid file formats
 			}
 	        else{ // No error found! Move uploaded files 
-	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
+	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "D:\home\site\wwwroot\uploads\".$name))
 				{
-					$file = fopen("uploads/".$name, "rb");
-					$contents = fread($file, filesize("uploads/".$name));
+					$file = fopen("D:\home\site\wwwroot\uploads\".$name, "rb");
+					$contents = fread($file, filesize("D:\home\site\wwwroot\uploads\".$name));
 					fclose($file);
 					$fileImage = ParseFile::createFromData($contents, $name);
 					$fileImage->save();
