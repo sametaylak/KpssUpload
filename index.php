@@ -15,8 +15,7 @@
 	<form action="" method="post" enctype="multipart/form-data">
     	<input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
   	<input type="submit" value="Upload!" /><br>
-  	Durum :  <progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
-</form>
+	</form>
 </body>
 </html>
 
@@ -81,8 +80,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        }
 	    }
 	}
-
-	echo "<script>alert('Yükleme tamamlandı!')</script>";
+	echo "<script>alert('Yükleme tamamlandı')</script>";
 }
 
 ?>
