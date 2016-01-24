@@ -25,9 +25,9 @@
 	<div class="container-main">
     <h1>Kpss Upload Formu</h1>
     <p>Kpss Notlar programı için basit bir upload formu</p>
-    <form action="" method="post" enctype="multipart/form-data" id="myForm">
+    <form action="upload.php" method="post" enctype="multipart/form-data" id="myForm">
       <input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
-    <input type="submit" value="Upload!" /><br>
+    <input type="submit" class="btn btn-default" value="Upload!" /><br>
   </div>
 </body>
 </html>
