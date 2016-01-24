@@ -55,10 +55,6 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        	$query = new ParseQuery("Photos");
 	        	$query->equalTo("FileName", $name);
 	        	$results = $query->find();
-
-	        	$dilimler = explode("_", $name);
-
-	        	echo $dilimler[0];
 	        	if (count($results) == 0) {
 	        		if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
 					{
@@ -68,8 +64,10 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 						$fileImage = ParseFile::createFromData($contents, $name);
 						$fileImage->save();
 
+	        			$parts = explode("_", $name);
+
 						$images = new ParseObject("Photos");
-						$images->set("FileName", $name);
+						$images->set("FileName", $parts[0]);
 						$images->set("FileImage", $fileImage);
 						try {
 						  $images->save();
