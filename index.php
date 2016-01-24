@@ -5,7 +5,7 @@
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <style type="text/css">
   	form {
-    	width: 500px;
+    	width: 400px;
     	margin: 0 auto;
 	}
   </style>
