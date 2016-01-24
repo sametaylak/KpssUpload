@@ -80,9 +80,8 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        }
 	    }
 	    $count++;
-	    echo $count;
 	}
-	echo "<script>alert('Yükleme tamamlandı')</script>";
+	echo "<script>alert('$countd dosyanın yüklemesi tamamlandı')</script>";
 }
 
 ?>
