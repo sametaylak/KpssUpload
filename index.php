@@ -56,7 +56,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        	$query->equalTo("FileName", $name);
 	        	$results = $query->find();
 
-	        	echo basename($name);
+	        	echo split('.', $name)[0];
 
 	        	if (count($results) == 0) {
 	        		if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
