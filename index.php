@@ -26,12 +26,13 @@
 </body>
 </html>
 <?php
-ob_start();
-session_start();
-ini_set('display_errors',1);
-error_reporting(E_ALL);
 
-
+if(isset($_POST)){
+{
+	ob_start();
+	session_start();
+	ini_set('display_errors',1);
+	error_reporting(E_ALL);
 	$kadi = $_POST['kadi'];
 	$sifre = $_POST['sifre'];
 	 
@@ -47,7 +48,7 @@ error_reporting(E_ALL);
 	        echo "<center>Kullanici Adi/Sifre Yanlis.<br></center>";
 	    }
 	}
-
+	ob_end_flush();
+}
  
-ob_end_flush();
 ?>
