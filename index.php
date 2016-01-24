@@ -19,6 +19,8 @@
 </html>
 
 <?php
+ini_set('display_errors',1);
+error_reporting(E_ALL);
 require 'vendor/autoload.php';
 
 use Parse\ParseClient;
@@ -48,12 +50,10 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 				continue; // Skip invalid file formats
 			}
 	        else{ // No error found! Move uploaded files 
-	        	echo $_FILES['files']['tmp_name'][$f];
-	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], $_SERVER['DOCUMENT_ROOT']."/uploads/".$name))
+	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
 				{
-					echo "test2";
-					$file = fopen($_SERVER['DOCUMENT_ROOT']."/uploads/".$name, "rb");
-					$contents = fread($file, filesize($_SERVER['DOCUMENT_ROOT']."/uploads/".$name));
+					$file = fopen("uploads/".$name, "rb");
+					$contents = fread($file, filesize("uploads/".$name));
 					fclose($file);
 					$fileImage = ParseFile::createFromData($contents, $name);
 					$fileImage->save();
