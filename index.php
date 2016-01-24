@@ -42,10 +42,10 @@ if($kadi=="admin" or $sifre=="kpssnotlar")  {
 }
 else {
     if($kadi=="" or $sifre=="") {
-        echo "<center>Lutfen kullanici adi ya da sifreyi bos birakmayiniz..! <a href=javascript:history.back(-1)>Geri Don</a></center>";
+        echo "<center>Lutfen kullanici adi ya da sifreyi bos birakmayiniz..!</center>";
     }
     else {
-        echo "<center>Kullanici Adi/Sifre Yanlis.<br><a href=javascript:history.back(-1)>Geri Don</a></center>";
+        echo "<center>Kullanici Adi/Sifre Yanlis.<br></center>";
     }
 }
  
