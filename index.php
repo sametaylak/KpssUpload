@@ -1,15 +1,3 @@
-<?php session_start() 
-
-if(!isset($_SESSION['test'])
-{
-?>
-
-
-<h1>Giriş yasak</h1>
-
-
-
-<?php } ?>
 <html lang="en">
 <head>
   	<meta charset="UTF-8" />
