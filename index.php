@@ -14,7 +14,7 @@
 	<h1 align="center">Kpss Upload Formu</h1>
 	<form action="" method="post" enctype="multipart/form-data">
     	<input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
-  	<input type="submit" value="Upload!" />
+  	<input type="submit" value="Upload!" /><br>
   	Durum :  <progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
 </form>
 </body>
