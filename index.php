@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <html lang="en">
 <head>
   	<meta charset="UTF-8" />
@@ -14,7 +13,6 @@
 <body>
 	<h1 align="center">Kpss Upload Formu</h1>
 	<form action="" method="post" enctype="multipart/form-data" id="myForm">
-	 	<input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
     	<input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
   	<input type="submit" value="Upload!" /><br>
 	</form>
@@ -25,15 +23,6 @@
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-$key = ini_get("session.upload_progress.123") . "myForm";
-if (!empty($_SESSION[$key])) {
-    $current = $_SESSION[$key]["bytes_processed"];
-    $total = $_SESSION[$key]["content_length"];
-    echo $current < $total ? ceil($current / $total * 100) : 100;
-}
-else {
-    echo 100;
-}
 require 'vendor/autoload.php';
 
 use Parse\ParseQuery;
