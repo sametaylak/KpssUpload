@@ -30,7 +30,7 @@ use Parse\ParseClient;
 use Parse\ParseObject;
 use Parse\ParseFile;
 
-ParseClient::initialize('KlF1Oqfji85VGgDVv5YWit9yj1CV8LRHCIER0D4t', '6urRPxy59tPQiC0W11nlvIgthQzbcXYce03mmMsC', 'SlLI7xwlNKCskjuB05eruvLvc9mXSHZNMs5XC1wQ');
+ParseClient::initialize('WzfhDDqrYdHMBYiByHDzxwBbgAyZV0TtrfXsUIxc', 'hxWI2RpwP85IkzwXNnF6LxqtNsbO0Ti7VGW953vC', 'qUmNwl2nCRbCOsNbdpZcKpnJXRuzMImNWJ14my4l');
 
 $valid_formats = array("jpg");
 $max_file_size = 1024*500; //100 kb
