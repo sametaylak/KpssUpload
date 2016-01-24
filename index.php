@@ -50,6 +50,7 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 				continue; // Skip invalid file formats
 			}
 	        else{ // No error found! Move uploaded files 
+	        	echo $_FILES['files']['name'][$f];
 	        	if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
 				{
 					$file = fopen("uploads/".$name, "rb");
