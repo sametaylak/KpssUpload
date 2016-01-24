@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="en">
 <head>
   	<meta charset="UTF-8" />
@@ -23,7 +24,6 @@
 <?php
 ini_set('display_errors',1);
 error_reporting(E_ALL);
-session_start();
 
 $key = ini_get("session.upload_progress.123") . "myForm";
 if (!empty($_SESSION[$key])) {
