@@ -13,6 +13,7 @@
 <body>
 	<h1 align="center">Kpss Upload Formu</h1>
 	<form action="" method="post" enctype="multipart/form-data">
+	 	<input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
     	<input type="file" id="file" name="files[]" multiple="multiple" accept="image/jpeg" />
   	<input type="submit" value="Upload!" /><br>
 	</form>
