@@ -50,7 +50,11 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 				continue; // Skip invalid file formats
 			}
 	        else{ // No error found! Move uploaded files 
-	        	if (!file_exists("uploads/".$name)) {
+	        	$query = new ParseQuery("Photos");
+	        	$query->equalTo("FileName", $name);
+	        	$results = $query->find();
+
+	        	if (count($results) == 0) {
 	        		if (move_uploaded_file($_FILES['files']['tmp_name'][$f], "uploads/".$name))
 					{
 						$file = fopen("uploads/".$name, "rb");
