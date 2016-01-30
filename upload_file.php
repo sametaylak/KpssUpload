@@ -79,13 +79,11 @@ if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
 	        			$parts = explode(".", $name);
 
 						$images = new ParseObject("Photos");
-						$images->set("FileName", $parts[0]);
+						$images->set("FileName", (int)$parts[0]);
 						$images->set("FileImage", $fileImage);
 						try {
 						  $images->save();
 						} catch (ParseException $ex) {  
-						  // Execute any logic that should take place if the save fails.
-						  // error is a ParseException object with an error code and message.
 						  echo 'There is a problem!: ' . $ex->getMessage();
 						}
 					}
